@@ -11,11 +11,11 @@
 
 |週次/習題| 主題 (Topic) | 程式碼 (Code) | 說明文件 (Docs) | 完成方法 |
 |:---:|:---|:---:|:---:|:---|
-| HW1 | **微積分基本定理** (Calculus) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%201/No1.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%201/README.md) | AI 協助 + 原創測試 |
-| HW2 | **二次多項式的根** (Quadratic Roots) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%202/no2.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%202/README.md) | AI 協助 (`cmath`應用) |
-| HW3 | **三次多項式的根** (Cubic Roots) | [Code]() | [Read]() | 參考公式 + AI 實作 |
-| HW4 | **N 次多項式 (牛頓法)** (Newton's Method) | [Code]() | [Read]() | AI 協助演算法邏輯 |
-| HW6 | **有限體與群** (Finite Fields) | [Code]() | [Read]() | AI 協助物件導向架構 |
+| 習題 1 | **微積分基本定理** (Calculus) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%201/No1.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%201/README.md) | AI 協助 + 原創測試 |
+| 習題 2 | **二次多項式的根** (Quadratic Roots) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%202/no2.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%202/README.md) | AI 協助 (`cmath`應用) |
+| 習題 3 | **三次多項式的根** (Cubic Roots) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%203/No3.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%203/README.md) | 參考公式 + AI 實作 |
+| 習題 4 | **N 次多項式 (牛頓法)** (Newton's Method) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%204/No4.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%204/README.md) | AI 協助演算法邏輯 |
+| 第二週習題 | **有限體與群** (Finite Fields) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%AC%AC%E4%BA%8C%E9%80%B1%E7%BF%92%E9%A1%8C/weak2.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%AC%AC%E4%BA%8C%E9%80%B1%E7%BF%92%E9%A1%8C/README.md) | AI 協助物件導向架構 |
 | Midterm| **曼德博集合** (Mandelbrot Set) | [Code]() | [Read]() | AI 生成繪圖核心 + 自行調整 |
 | HW9 | **幾何系統建構** (Geometry System) | [Code]() | [Read]() | AI 協助向量運算 |
 | HW10| **機率統計檢定** (Hypothesis Testing) | [Code]() | [Read]() | AI 解說原理 + 自行實作 |
