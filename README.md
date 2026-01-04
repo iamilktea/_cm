@@ -1,5 +1,5 @@
 # 課程：程式與數學
-# 有參考Gemini
+# [有參考Gemini](https://gemini.google.com/share/e6b59b5148e5)
 欄位 | 內容
 -----|--------
 學期 | 114 學年上學期
