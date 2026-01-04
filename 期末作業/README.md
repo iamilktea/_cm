@@ -12,17 +12,17 @@
 |週次/習題| 主題 (Topic) | 程式碼 (Code) | 說明文件 (Docs) | 完成方法 |
 |:---:|:---|:---:|:---:|:---|
 | HW1 | **微積分基本定理** (Calculus) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%201/No1.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%201/README.md) | AI 協助 + 原創測試 |
-| HW2 | **二次多項式的根** (Quadratic Roots) | [Code](./root2.py) | [Read](./README_HW2.md) | AI 協助 (`cmath`應用) |
-| HW3 | **三次多項式的根** (Cubic Roots) | [Code](./root3.py) | [Read](./README_HW3.md) | 參考公式 + AI 實作 |
-| HW4 | **N 次多項式 (牛頓法)** (Newton's Method) | [Code](./rootN.py) | [Read](./README_HW4.md) | AI 協助演算法邏輯 |
-| HW6 | **有限體與群** (Finite Fields) | [Code](./finite_field.py) | [Read](./README_HW6.md) | AI 協助物件導向架構 |
-| Midterm| **曼德博集合** (Mandelbrot Set) | [Code](./fractal.py) | [Read](./README_Midterm.md) | AI 生成繪圖核心 + 自行調整 |
-| HW9 | **幾何系統建構** (Geometry System) | [Code](./geometry.py) | [Read](./README_HW9.md) | AI 協助向量運算 |
-| HW10| **機率統計檢定** (Hypothesis Testing) | [Code](./statistics_test.py) | [Read](./README_HW10.md) | AI 解說原理 + 自行實作 |
-| HW11| **資訊理論與漢明碼** (Info Theory) | [Code](./info_theory.py) | [Read](./README_HW11.md) | AI 協助編碼邏輯 |
-| HW12| **線性代數演算法** (Linear Algebra) | [Code](./linear_algebra.py) | [Read](./README_HW12.md) | AI 協助矩陣分解實作 |
-| HW13| **常微分方程求解** (ODE Solver) | [Code](./ode1.py) | [Read](./README_HW13.md) | AI 協助字串處理與誤差修正 |
-| HW14| **傅立葉轉換** (DFT/IDFT) | [Code](./fourier.py) | [Read](./README_HW14.md) | 參考公式 + 原創實作 |
+| HW2 | **二次多項式的根** (Quadratic Roots) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%202/no2.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%202/README.md) | AI 協助 (`cmath`應用) |
+| HW3 | **三次多項式的根** (Cubic Roots) | [Code]() | [Read]() | 參考公式 + AI 實作 |
+| HW4 | **N 次多項式 (牛頓法)** (Newton's Method) | [Code]() | [Read]() | AI 協助演算法邏輯 |
+| HW6 | **有限體與群** (Finite Fields) | [Code]() | [Read]() | AI 協助物件導向架構 |
+| Midterm| **曼德博集合** (Mandelbrot Set) | [Code]() | [Read]() | AI 生成繪圖核心 + 自行調整 |
+| HW9 | **幾何系統建構** (Geometry System) | [Code]() | [Read]() | AI 協助向量運算 |
+| HW10| **機率統計檢定** (Hypothesis Testing) | [Code]() | [Read]() | AI 解說原理 + 自行實作 |
+| HW11| **資訊理論與漢明碼** (Info Theory) | [Code]() | [Read]() | AI 協助編碼邏輯 |
+| HW12| **線性代數演算法** (Linear Algebra) | [Code]() | [Read]() | AI 協助矩陣分解實作 |
+| HW13| **常微分方程求解** (ODE Solver) | [Code]() | [Read]() | AI 協助字串處理與誤差修正 |
+| HW14| **傅立葉轉換** (DFT/IDFT) | [Code]() | [Read]() | 參考公式 + 原創實作 |
 
 ---
 
