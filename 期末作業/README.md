@@ -16,13 +16,13 @@
 | 習題 3 | **三次多項式的根** (Cubic Roots) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%203/No3.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%203/README.md) | 參考公式 + AI 實作 |
 | 習題 4 | **N 次多項式 (牛頓法)** (Newton's Method) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%204/No4.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%204/README.md) | AI 協助演算法邏輯 |
 | 第二週習題 | **有限體與群** (Finite Fields) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%AC%AC%E4%BA%8C%E9%80%B1%E7%BF%92%E9%A1%8C/weak2.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%AC%AC%E4%BA%8C%E9%80%B1%E7%BF%92%E9%A1%8C/README.md) | AI 協助物件導向架構 |
-| Midterm| **曼德博集合** (Mandelbrot Set) | [Code]() | [Read]() | AI 生成繪圖核心 + 自行調整 |
-| HW9 | **幾何系統建構** (Geometry System) | [Code]() | [Read]() | AI 協助向量運算 |
-| HW10| **機率統計檢定** (Hypothesis Testing) | [Code]() | [Read]() | AI 解說原理 + 自行實作 |
-| HW11| **資訊理論與漢明碼** (Info Theory) | [Code]() | [Read]() | AI 協助編碼邏輯 |
-| HW12| **線性代數演算法** (Linear Algebra) | [Code]() | [Read]() | AI 協助矩陣分解實作 |
-| HW13| **常微分方程求解** (ODE Solver) | [Code]() | [Read]() | AI 協助字串處理與誤差修正 |
-| HW14| **傅立葉轉換** (DFT/IDFT) | [Code]() | [Read]() | 參考公式 + 原創實作 |
+| 期中作業 | **曼德博集合** (Mandelbrot Set) | [Code](https://github.com/iamilktea/_cm/blob/main/%E6%9C%9F%E4%B8%AD%E4%BD%9C%E6%A5%AD/mid.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E6%9C%9F%E4%B8%AD%E4%BD%9C%E6%A5%AD/README.md) | AI 生成繪圖核心 + 自行調整 |
+| 第三週習題 | **幾何系統建構** (Geometry System) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%AC%AC%E4%B8%89%E9%80%B1%E7%BF%92%E9%A1%8C/week3.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%AC%AC%E4%B8%89%E9%80%B1%E7%BF%92%E9%A1%8C/README.md) | AI 協助向量運算 |
+| 第八週習題 | **機率統計檢定** (Hypothesis Testing) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%AC%AC%E5%85%AB%E9%80%B1%E7%BF%92%E9%A1%8C/week8.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%AC%AC%E5%85%AB%E9%80%B1%E7%BF%92%E9%A1%8C/README.md) | AI 解說原理 + 自行實作 |
+| 第九周習題 | **資訊理論與漢明碼** (Info Theory) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%AC%AC%E4%B9%9D%E5%91%A8%E7%BF%92%E9%A1%8C/week9.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%AC%AC%E4%B9%9D%E5%91%A8%E7%BF%92%E9%A1%8C/README.md) | AI 協助編碼邏輯 |
+| 第十周習題 | **線性代數演算法** (Linear Algebra) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%AC%AC%E5%8D%81%E5%91%A8%E7%BF%92%E9%A1%8C/week10.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%AC%AC%E5%8D%81%E5%91%A8%E7%BF%92%E9%A1%8C/README.md) | AI 協助矩陣分解實作 |
+| 第11周習題 | **常微分方程求解** (ODE Solver) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%AC%AC11%E5%91%A8%E7%BF%92%E9%A1%8C/week11.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%AC%AC11%E5%91%A8%E7%BF%92%E9%A1%8C/README.md) | AI 協助字串處理與誤差修正 |
+| 第13周習題 | **傅立葉轉換** (DFT/IDFT) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%AC%AC13%E5%91%A8%E7%BF%92%E9%A1%8C/week13.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%AC%AC13%E5%91%A8%E7%BF%92%E9%A1%8C/README.md) | 參考公式 + 原創實作 |
 
 ---
 
