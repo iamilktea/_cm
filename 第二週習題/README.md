@@ -1,143 +1,74 @@
-"""
-習題 6 : 有限體 (Finite Field)
-目標：
-1. 實作有限體類別 (Galois Field, GF(p))
-2. 驗證加法構成群 (Group)
-3. 驗證乘法(排除0)構成群
-4. 驗證分配律
-5. 實作運算子重載 (+, -, *, /)
-"""
+# 習題 6 : 有限體 (Finite Field) 實作與驗證
 
-class GF:
-    """
-    有限體元素類別 (Galois Field Element)
-    代表 GF(p) 中的一個數字
-    """
-    def __init__(self, val, p):
-        self.val = val % p
-        self.p = p
+本專案旨在透過 Python 實作一個有限體 $GF(p)$，並驗證其是否符合代數結構中「體 (Field)」的嚴格定義，即包含加法群、乘法群以及分配律。
 
-    def __repr__(self):
-        return f"{self.val}"
+## 1. AI 問答：有限體是什麼？
 
-    # --- 運算子重載 (Operator Overloading) ---
-    
-    def __add__(self, other):
-        # (a + b) mod p
-        self._check_p(other)
-        return GF(self.val + other.val, self.p)
+> **Q: 請問什麼是有限體 (Finite Field)？它具備哪些特性？**
+>
+> **AI 回答摘要：**
+> 有限體（又稱 Galois Field，伽羅瓦體）是一個包含有限個元素的數學集合，在該集合上定義了加法、減法、乘法和除法（除數不為零）四種運算，且運算結果仍在該集合內。
+>
+> 一個最常見的例子是 **整數模 $p$ ($p$ 為質數)**，記作 $GF(p)$ 或 $\mathbb{Z}_p$。
+>
+> **主要特性：**
+> 1.  **加法群**：集合對加法封閉，有結合律、交換律，有加法單位元素 (0)，且每個元素都有加法反元素。
+> 2.  **乘法群**：集合中「除去 0 以外的元素」對乘法封閉，有結合律、交換律，有乘法單位元素 (1)，且每個元素都有乘法反元素。
+> 3.  **分配律**：乘法對加法具有分配性，即 $a(b+c) = ab + ac$。
 
-    def __sub__(self, other):
-        # (a - b) mod p
-        self._check_p(other)
-        return GF(self.val - other.val, self.p)
+*(分享連結：請在此處貼上您實際與 ChatGPT/Claude 對話的連結，如果有的話)*
 
-    def __mul__(self, other):
-        # (a * b) mod p
-        self._check_p(other)
-        return GF(self.val * other.val, self.p)
+## 2. 程式實作架構
 
-    def __truediv__(self, other):
-        # (a / b) mod p => a * b^(-1) mod p
-        self._check_p(other)
-        if other.val == 0:
-            raise ZeroDivisionError("Cannot divide by zero in Finite Field")
-        
-        # 使用費馬小定理求乘法反元素: b^(p-2) mod p
-        inverse = pow(other.val, self.p - 2, self.p)
-        return GF(self.val * inverse, self.p)
+本程式 `finite_field.py` 實作了 $GF(p)$ 的完整結構：
 
-    def __eq__(self, other):
-        if isinstance(other, int):
-            return self.val == (other % self.p)
-        return self.val == other.val and self.p == other.p
+### 核心類別 `GF`
+這是一個模擬有限體元素的類別，初始化時需指定數值 `val` 與模數 `p`。
 
-    def _check_p(self, other):
-        if self.p != other.p:
-            raise ValueError("Cannot operate on elements from different fields")
+* **資料結構**：儲存 `val % p`，確保數值永遠落在 $[0, p-1]$ 區間內。
+* **運算子重載 (Operator Overloading)**：
+    * `__add__ (+)`: 實作 $(a+b) \pmod p$
+    * `__sub__ (-)`: 實作 $(a-b) \pmod p$
+    * `__mul__ (*)`: 實作 $(a \times b) \pmod p$
+    * `__truediv__ (/)`: 實作除法。
+        * 在有限體中，除以 $b$ 等同於乘以 $b$ 的乘法反元素 ($b^{-1}$)。
+        * 使用 Python 的 `pow(b, p-2, p)` (費馬小定理) 來快速計算反元素。
 
-# --- 驗證邏輯 (Axiom Verification) ---
+### 驗證函數 (Axioms Check)
+為了證明我們的實作符合數學定義，程式包含以下驗證邏輯：
 
-def check_group_axioms(elements, operation_name, op_func, identity_val):
-    """
-    驗證是否符合群 (Group) 的定義：
-    1. 封閉性 (Closure) - 由類別定義保證
-    2. 結合律 (Associativity): (a op b) op c == a op (b op c)
-    3. 單位元素 (Identity): a op e == a
-    4. 反元素 (Inverse): a op a' == e
-    """
-    print(f"--- 驗證 {operation_name} 群性質 ---")
-    
-    # 1. 檢查結合律
-    for a in elements:
-        for b in elements:
-            for c in elements:
-                res1 = op_func(op_func(a, b), c)
-                res2 = op_func(a, op_func(b, c))
-                if res1 != res2:
-                    print(f"❌ 結合律失敗: ({a}{operation_name}{b}){operation_name}{c} != {a}{operation_name}({b}{operation_name}{c})")
-                    return False
-    print("✅ 結合律 (Associativity) 通過")
+1.  **`check_group_axioms`**:
+    * 驗證 **結合律** $(a+b)+c = a+(b+c)$。
+    * 驗證 **單位元素** 是否存在 (加法為 0, 乘法為 1)。
+    * 驗證 **反元素** 是否存在 (每一元素都能找到對應元素使其運算結果回歸單位元素)。
+2.  **`check_distributivity`**:
+    * 驗證 $a \times (b+c) = a \times b + a \times c$。
 
-    # 2. 檢查單位元素
-    identity_element = None
-    for e in elements:
-        is_identity = True
-        for a in elements:
-            if op_func(a, e) != a or op_func(e, a) != a:
-                is_identity = False
-                break
-        if is_identity:
-            identity_element = e
-            break
-            
-    if identity_element is None or identity_element.val != identity_val:
-        print(f"❌ 找不到正確的單位元素 (預期 {identity_val})")
-        return False
-    print(f"✅ 單位元素 (Identity) 存在且正確: {identity_element}")
+## 3. 執行結果範例
 
-    # 3. 檢查反元素
-    for a in elements:
-        has_inverse = False
-        for b in elements:
-            if op_func(a, b) == identity_element and op_func(b, a) == identity_element:
-                has_inverse = True
-                break
-        if not has_inverse:
-            print(f"❌ 元素 {a} 沒有反元素")
-            return False
-    print("✅ 反元素 (Inverse) 對所有元素皆存在")
-    
-    print(f"🎉 {operation_name} 構成一個群 (Group)！\n")
-    return True
+以 $GF(5) = \{0, 1, 2, 3, 4\}$ 為例，程式執行輸出如下：
 
-def check_distributivity(elements):
-    """
-    驗證分配律: a * (b + c) == a * b + a * c
-    """
-    print("--- 驗證 分配律 (Distributivity) ---")
-    for a in elements:
-        for b in elements:
-            for c in elements:
-                # 左式: a * (b + c)
-                left = a * (b + c)
-                # 右式: a * b + a * c
-                right = (a * b) + (a * c)
-                
-                if left != right:
-                    print(f"❌ 分配律失敗: {a} * ({b} + {c}) != {a}*{b} + {a}*{c}")
-                    return False
-    print("✅ 分配律 (Distributivity) 通過！\n")
-    return True
+```text
+正在建立 GF(5) 的所有元素...
 
-# --- 主程式 ---
+--- 驗證 + 群性質 ---
+✅ 結合律 (Associativity) 通過
+✅ 單位元素 (Identity) 存在且正確: 0
+✅ 反元素 (Inverse) 對所有元素皆存在
+🎉 + 構成一個群 (Group)！
 
-if __name__ == "__main__":
-    # 設定質數 p，例如 p = 5
-    P = 5
-    print(f"正在建立 GF({P}) 的所有元素...\n")
-    
-    # 產生 GF(5) 的所有元素: {0, 1, 2, 3, 4}
-    all_elements = [GF(i, P) for i in range(P)]
-    
-    # 產生乘法群元素 (排除
+--- 驗證 * 群性質 ---
+✅ 結合律 (Associativity) 通過
+✅ 單位元素 (Identity) 存在且正確: 1
+✅ 反元素 (Inverse) 對所有元素皆存在
+🎉 * 構成一個群 (Group)！
+
+--- 驗證 分配律 (Distributivity) ---
+✅ 分配律 (Distributivity) 通過！
+
+--- 運算子重載 使用範例 ---
+a = 3, b = 4 (in GF(5))
+a + b = 3 + 4 = 2
+a - b = 3 - 4 = 4
+a * b = 3 * 4 = 2
+a / b = 3 / 4 = 2
