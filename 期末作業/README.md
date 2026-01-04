@@ -11,7 +11,7 @@
 
 |週次/習題| 主題 (Topic) | 程式碼 (Code) | 說明文件 (Docs) | 完成方法 |
 |:---:|:---|:---:|:---:|:---|
-| HW1 | **微積分基本定理** (Calculus) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%201/No1.py) | [Read]([./README_HW1.md](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%201/README.md)) | AI 協助 + 原創測試 |
+| HW1 | **微積分基本定理** (Calculus) | [Code](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%201/No1.py) | [Read](https://github.com/iamilktea/_cm/blob/main/%E7%BF%92%E9%A1%8C%201/README.md) | AI 協助 + 原創測試 |
 | HW2 | **二次多項式的根** (Quadratic Roots) | [Code](./root2.py) | [Read](./README_HW2.md) | AI 協助 (`cmath`應用) |
 | HW3 | **三次多項式的根** (Cubic Roots) | [Code](./root3.py) | [Read](./README_HW3.md) | 參考公式 + AI 實作 |
 | HW4 | **N 次多項式 (牛頓法)** (Newton's Method) | [Code](./rootN.py) | [Read](./README_HW4.md) | AI 協助演算法邏輯 |
